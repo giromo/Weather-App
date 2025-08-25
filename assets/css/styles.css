@@ -1,0 +1,118 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.weather-app {
+    background: linear-gradient(to bottom right, #2980b9, #6dd5fa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.weather-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 90%;
+    animation: fade-in 0.5s ease;
+}
+
+.weather-info {
+    margin-top: 20px;
+}
+
+.temperature {
+    font-size: 48px;
+    font-weight: 500;
+    color: #333333;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 20px;
+    color: #666666;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.weather-icon {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    animation: zoom-in 0.5s ease;
+}
+
+#location-input {
+    padding: 12px;
+    margin-right: 5px;
+    border-radius: 8px;
+    border: none;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoom-in {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Weather backgrounds based on condition */
+.weather-container.sunny {
+    background: linear-gradient(to bottom right, #ffedbc, #ffffff);
+}
+
+.weather-container.cloudy {
+    background: linear-gradient(to bottom right, #dfe4ea, #ffffff);
+}
+
+.weather-container.rainy {
+    background: linear-gradient(to bottom right, #85a3bf, #ffffff);
+}
