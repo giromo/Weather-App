@@ -11,7 +11,7 @@ async function getWeather(event) {
     }
 
     // آدرس API با نام شهر و واحد سانتی‌گراد
-    const apiUrl = `https://api.cactus-dev.ir/weather.php?city=${encodeURIComponent(location)}&units=metric`;
+    const apiUrl = `https://onyxapi.ir/weather.php?city=${encodeURIComponent(location)}&units=metric`;
 
     try {
         // ارسال درخواست به API
